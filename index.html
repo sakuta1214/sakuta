@@ -4,8 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>〇〇建設株式会社</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome（アイコン用） -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pM/iMQEfe4Pr1JfiVMMxVYxV7zxDqRmR7Eslw6WvDv+KWVYj0Z3Z7H6TA5bY5ewxl7lAGYJ6N8o6DQG+2jZdIw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -13,10 +25,10 @@
       <h1>〇〇建設株式会社</h1>
       <nav>
         <ul>
-          <li><a href="#services">事業内容</a></li>
-          <li><a href="#company">会社概要</a></li>
-          <li><a href="#recruit">採用情報</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
+          <li><a href="#services">事業内容 <i class="fa-solid fa-gear"></i></a></li>
+          <li><a href="#company">会社概要 <i class="fa-solid fa-building"></i></a></li>
+          <li><a href="#recruit">採用情報 <i class="fa-solid fa-user-group"></i></a></li>
+          <li><a href="#contact">お問い合わせ <i class="fa-solid fa-envelope"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -24,18 +36,18 @@
 
   <section id="hero">
     <div class="container">
-      <h2>信頼と実績の建築会社</h2>
+      <h2>信頼と実績の建築会社 <i class="fa-solid fa-hard-hat"></i></h2>
       <p>地域とともに歩み、暮らしを支える確かな技術。</p>
     </div>
   </section>
 
-  <section id="services" class="container">
-    <h2>事業内容</h2>
+  <section id="services" class="container fadein">
+    <h2><i class="fa-solid fa-gear"></i> 事業内容</h2>
     <p>住宅、店舗、公共施設の設計・施工・監理を行っています。安全・品質・信頼をモットーに、地域に密着した建築サービスを提供します。</p>
   </section>
 
-  <section id="company" class="container">
-    <h2>会社概要</h2>
+  <section id="company" class="container fadein">
+    <h2><i class="fa-solid fa-building"></i> 会社概要</h2>
     <ul>
       <li>会社名：〇〇建設株式会社</li>
       <li>所在地：〒123-4567 東京都〇〇区〇〇1-2-3</li>
@@ -44,13 +56,13 @@
     </ul>
   </section>
 
-  <section id="recruit" class="container">
-    <h2>採用情報</h2>
+  <section id="recruit" class="container fadein">
+    <h2><i class="fa-solid fa-user-group"></i> 採用情報</h2>
     <p>私たちと一緒に「まちをつくる」仲間を募集しています。施工管理、設計、現場スタッフなど幅広い職種があります。</p>
   </section>
 
-  <section id="contact" class="container">
-    <h2>お問い合わせ</h2>
+  <section id="contact" class="container fadein">
+    <h2><i class="fa-solid fa-envelope"></i> お問い合わせ</h2>
     <form action="https://formspree.io/f/your-id-here" method="POST">
       <label>お名前：
         <input type="text" name="name" required />
@@ -68,6 +80,14 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 〇〇建設株式会社</p>
+      <div class="sns-links">
+        <a href="https://twitter.com/yourcompany" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/yourcompany" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
