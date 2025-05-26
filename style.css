@@ -1,9 +1,11 @@
+/* ベース */
 body {
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
   background: #f8f9fa;
   color: #333;
+  scroll-behavior: smooth; /* スクロールスムーズ化 */
 }
 
 .container {
@@ -39,6 +41,18 @@ nav li {
 nav a {
   color: #fff;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #99ccff;
+  text-decoration: underline;
+  outline: none;
 }
 
 #hero {
@@ -52,6 +66,24 @@ nav a {
 section h2 {
   border-bottom: 2px solid #004080;
   padding-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* フェードイン用 */
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 form {
@@ -61,12 +93,23 @@ form {
 
 form label {
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 input, textarea {
   padding: 0.5rem;
   font-size: 1rem;
   width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #004080;
+  background-color: #e6f0ff;
+  border-color: #004080;
 }
 
 button {
@@ -75,11 +118,59 @@ button {
   padding: 0.75rem;
   border: none;
   cursor: pointer;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
+button:hover,
+button:focus {
+  background-color: #003366;
+  outline: none;
+}
+
+/* フッター */
 footer {
   background-color: #002a52;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
+}
+
+footer .sns-links {
+  margin-top: 0.5rem;
+}
+
+footer .sns-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .sns-links a:hover,
+footer .sns-links a:focus {
+  color: #99ccff;
+  outline: none;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #004080;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  nav li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  nav a {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+  header h1 {
+    padding-left: 1rem;
+  }
 }
