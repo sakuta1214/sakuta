@@ -31,6 +31,7 @@
           <li><a href="recruit.html">採用情報</a></li>
           <li><a href="#news">お知らせ</a></li>
           <li><a href="#blog">ブログ</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
@@ -79,6 +80,23 @@
       <li><a href="blog/post1.html">【現場レポート】〇〇市の新築工事が始まりました</a></li>
       <li><a href="blog/post2.html">【社員インタビュー】若手現場監督の一日</a></li>
     </ul>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact" class="container fadein">
+    <h2><i class="fa-solid fa-envelope"></i> お問い合わせ</h2>
+    <form action="https://formspree.io/f/mpwdgyqa" method="POST">
+      <label>お名前：
+        <input type="text" name="name" required />
+      </label>
+      <label>メールアドレス：
+        <input type="email" name="email" required />
+      </label>
+      <label>お問い合わせ内容：
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">送信</button>
+    </form>
   </section>
 
   <footer>
